@@ -24,7 +24,7 @@ card.addEventListener("click", function () {
   toggleDisplay(cardState);
 });
 
-function toggleDisplay(state) {
+function toggleDisplay(state:boolean) {
   if (state) {
     shortDesc.style.setProperty("display", "none");
     longDesc.style.setProperty("display", "block");
