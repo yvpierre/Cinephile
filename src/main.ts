@@ -9,29 +9,31 @@ app.use(router);
 app.mount("#app");
 
 // @ts-ignore
-const card:HTMLElement = document.querySelector(".card");
+const cards:HTMLElement = document.querySelectorAll(".card");
 // @ts-ignore
-const shortDesc:HTMLElement = document.querySelector(".desc--short");
+const shortDesc:HTMLElement = document.querySelectorAll(".desc--short");
 // @ts-ignore
-const longDesc:HTMLElement = document.querySelector(".desc--long");
+const longDesc:HTMLElement = document.querySelectorAll(".desc--long");
 
 let cardState = false;
 
-console.log(getComputedStyle(card).display);
+for(let c:any in cards){
+  // @ts-ignore
+  cards[c].addEventListener("click", function () {
+    cardState ? (cardState = false) : (cardState = true);
+    toggleDisplay(cardState, cards[c]);
+  });
+}
 
-card.addEventListener("click", function () {
-  cardState ? (cardState = false) : (cardState = true);
-  toggleDisplay(cardState);
-});
 
-function toggleDisplay(state:boolean) {
+function toggleDisplay(state:boolean, c:any) {
   if (state) {
     shortDesc.style.setProperty("display", "none");
     longDesc.style.setProperty("display", "block");
-    card.style.setProperty("justify-content", "flex-start");
+    c.style.setProperty("justify-content", "flex-start");
   } else {
     shortDesc.style.setProperty("display", "flex");
     longDesc.style.setProperty("display", "none");
-    card.style.setProperty("justify-content", "flex-end");
+    c.style.setProperty("justify-content", "flex-end");
   }
 }
