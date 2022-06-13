@@ -9,31 +9,41 @@ app.use(router);
 app.mount("#app");
 
 // @ts-ignore
-const cards:HTMLElement = document.querySelectorAll(".card");
+const cards:array = document.querySelectorAll(".card");
 // @ts-ignore
 const shortDesc:HTMLElement = document.querySelectorAll(".desc--short");
 // @ts-ignore
 const longDesc:HTMLElement = document.querySelectorAll(".desc--long");
 
-let cardState = false;
 
-for(let c:any in cards){
+
+for(let c:HTMLElement in cards){
+  let cardState = false;
   // @ts-ignore
   cards[c].addEventListener("click", function () {
-    cardState ? (cardState = false) : (cardState = true);
-    toggleDisplay(cardState, cards[c]);
+    if(cardState){
+      cards[c].classList.add("active")
+      cardState = false
+    }else {
+      cards[c].classList.remove("active")
+      cardState = true
+
+    }
+
+    toggleDisplay(cardState, cards[c], shortDesc[c], longDesc[c]);
   });
 }
 
 
-function toggleDisplay(state:boolean, c:any) {
-  if (state) {
-    shortDesc.style.setProperty("display", "none");
-    longDesc.style.setProperty("display", "block");
-    c.style.setProperty("justify-content", "flex-start");
-  } else {
-    shortDesc.style.setProperty("display", "flex");
-    longDesc.style.setProperty("display", "none");
-    c.style.setProperty("justify-content", "flex-end");
-  }
+function toggleDisplay(state:boolean, c:HTMLElement, short:HTMLElement, long:HTMLElement) {
+    if (c.classList.contains("active")) {
+      short.style.setProperty("display", "flex");
+      long.style.setProperty("display", "none");
+      c.style.setProperty("justify-content", "flex-end");
+      c.classList.remove("active")
+    } else {
+      short.style.setProperty("display", "none");
+      long.style.setProperty("display", "block");
+      c.style.setProperty("justify-content", "flex-start");
+    }
 }

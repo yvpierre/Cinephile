@@ -30,7 +30,7 @@ import WelcomeItem from "@/components/WelcomeItem.vue";
 }
 
 .body--test > Card {
-  max-width: 100px;
+  border: 2px solid blue;
 }
 
 </style>

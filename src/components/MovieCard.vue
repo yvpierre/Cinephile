@@ -48,7 +48,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 
 .card {
   width: 270px;
