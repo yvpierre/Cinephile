@@ -1,24 +1,30 @@
 <script setup lang="ts">
 import HelloWorld from "@/components/HelloWorld.vue";
-import Card from "@/components/MovieCard.vue";
 import WelcomeItem from "@/components/WelcomeItem.vue";
-
-
+import Card from "@/components/MovieCard.vue";
+import NavbarComponent from "@/components/NavbarComponent.vue";
 
 </script>
 
 <template>
   <body>
-  <div class="body--test">
-    <Card v-for="n in 20" :key="n"/>
-  </div>
+    <NavbarComponent />
+    <div class="main--cards">
+      <Card v-for="n in 1" :key="n"/>
+    </div>
   </body>
 </template>
 
 <style>
 @import '@/assets/base.css';
 
-.body--test {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main--cards {
   align-items: flex-start;
   justify-content: center;
   display: flex;
@@ -29,7 +35,7 @@ import WelcomeItem from "@/components/WelcomeItem.vue";
   justify-content: space-around;
 }
 
-.body--test > Card {
+.main--cards > Card {
   border: 2px solid blue;
 }
 
