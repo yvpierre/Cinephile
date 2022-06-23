@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'Captain Meredith Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Captain Meredith Regular'), url('CaptainMeredith-8MYJM.woff') format('woff');
+}
+
 body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  background-color: rgba(216, 243, 220, 0.5);
 }

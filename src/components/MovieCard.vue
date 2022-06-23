@@ -40,8 +40,8 @@
           the mean streets of New York.
         </div>
         <div class="long--btns">
-          <div class="long--btnInfo">+&nbsp;Infos</div>
-          <div class="long--btnAdd">Add</div>
+          <div class="long--btnInfo btn--sec">+&nbsp;Infos</div>
+          <div class="long--btnAdd btn--pri">Add</div>
         </div>
       </div>
     </div>
@@ -76,7 +76,6 @@
 .desc--short--1 {
   display: flex;
   height: 50%;
-  border-top: 4px solid var(--color--35);
   justify-content: space-between;
   align-items: center;
   padding: 5px 15px 0 15px;
@@ -89,6 +88,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 15px 5px 15px;
+  margin-bottom: 5px;
 }
 
 .titre {
@@ -108,7 +108,7 @@
 
 .btn-add {
   font-weight: 600;
-  padding: 6px 12px 6px 12px;
+  padding: 3px 12px 3px 12px;
   border-radius: 5px;
 }
 
@@ -126,7 +126,7 @@
   display: none;
   background: linear-gradient(90deg, #264653, #276467, #28807a, #2A9D8F);
   background-size: 400% 400%;
-  animation: gradient 5s ease infinite;border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 5px 5px;
 }
 
 .desc--long--1 {
