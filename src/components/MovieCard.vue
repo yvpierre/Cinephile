@@ -63,6 +63,10 @@
   filter: drop-shadow(0px 5px 10px rgba(18, 103, 93, 0.75));
 }
 
+.card:hover {
+  filter: drop-shadow(0px 5px 20px rgba(42, 157, 143, 0.75));
+}
+
 .desc--short {
   min-height: 70px;
   background: linear-gradient(90deg, #264653, #276467, #28807a, #2A9D8F);

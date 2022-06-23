@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 60px;
+  height: 55px;
   top: 0;
   justify-content: space-between;
   align-items: center;
@@ -67,12 +67,35 @@
   max-width: 500px;
   justify-content: space-evenly;
   color: #d9d9d9;
+  font-size: 16px;
+}
+
+.navbar--choice {
+  display: inline-block;
+  position: relative;
+}
+
+.navbar--choice:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar--choice:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .navbar--choice:hover {
-  color: white;
-  text-decoration: underline;
   text-underline-offset: 5px;
+  color: white;
 }
 
 .navbar--buttons {
