@@ -57,22 +57,20 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 15px 15px 0 0;
-  margin: 10px 0 10px 0;
-  border: 5px solid var(--color--45);
+  border-radius: 15px 15px 5px 5px;
+  margin: 10px 2.5px 10px 2.5px;
   color: #f5f5f5;
   filter: drop-shadow(0px 5px 10px rgba(18, 103, 93, 0.75));
 }
 
 .desc--short {
   min-height: 70px;
-  background: linear-gradient(
-      269.19deg,
-      rgba(42, 157, 143, 0.9) 0.7%,
-      rgba(38, 70, 83, 0.9) 99.3%
-  );
+  background: linear-gradient(90deg, #264653, #276467, #28807a, #2A9D8F);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
   display: flex;
   flex-direction: column;
+  border-radius: 0 0 5px 5px;
 }
 
 .desc--short--1 {
@@ -126,8 +124,9 @@
 .desc--long {
   height: 100%;
   display: none;
-  background: linear-gradient(335.55deg, rgba(42, 157, 143, 0.9) 0%, rgba(38, 70, 83, 0.9) 100%);
-  border-radius: 10px 10px 0 0;
+  background: linear-gradient(90deg, #264653, #276467, #28807a, #2A9D8F);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;border-radius: 10px 10px 0 0;
 }
 
 .desc--long--1 {

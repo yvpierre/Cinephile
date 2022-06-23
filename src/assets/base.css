@@ -4,13 +4,4 @@ body {
   align-items: flex-start;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-
-  --color--65: #162A32;
-  --color--55: #264653;
-  --color--45: #2A9D8F;
-  --color--35: #E9C46A;
-  --color--25: #F4A261;
-  --color--15: #E76F51;
-  --color--05--white: #EFF2F1;
-
 }

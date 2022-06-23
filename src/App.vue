@@ -7,7 +7,7 @@ import NavbarComponent from "@/components/NavbarComponent.vue";
 </script>
 
 <template>
-  <body>
+  <body class="body">
     <NavbarComponent />
     <div class="main--cards">
       <Card v-for="n in 1" :key="n"/>
@@ -31,6 +31,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   border: 2px solid red;
+  margin-top: 100px;
   padding: 40px 30px;
   justify-content: space-around;
 }
