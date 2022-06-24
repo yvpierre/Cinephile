@@ -58,16 +58,15 @@ export default {
   align-items: center;
   justify-content: space-around;
   margin-top: 40px;
-  border: 2px solid red;
   width: 100%;
   height: 500px;
 }
 
 .main--title {
   margin-right: 30px;
-  color: #264653;
-  font-size: 42px;
-  max-width: 400px;
+  color: #12675D;
+  font-size: 48px;
+  max-width: 450px;
   font-weight: 600;
   line-height: 1;
 }
@@ -81,6 +80,27 @@ export default {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  position: relative;
+  text-decoration-thickness: 15px;
 }
+
+.anim--title:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, #ee542e, #e87352, #ef8e5b, #f0af64);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.anim--title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 </style>

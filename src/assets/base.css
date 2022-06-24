@@ -11,6 +11,6 @@ body {
   align-items: flex-start;
   justify-content: center;
   font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-  background-color: rgba(216, 243, 220, 0.5);
+  background-color: #E1F6E4;
   scroll-behavior: smooth;
 }

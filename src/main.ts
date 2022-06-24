@@ -1,6 +1,15 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
+// @ts-ignore
+import $ from "jquery";
+// @ts-ignore
+import { gsap } from "gsap";
+// @ts-ignore
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const app = createApp(App);
 
@@ -66,41 +75,19 @@ function toggleDisplay(c:Card){
     }
 }
 
-
-
-/*
-for(let c:number = 0; c < cards.length(); c++) {
-  console.log(c)
-  let cardState = false;
-  cards[c].addEventListener("click", function () {
-    if (cards[c].classList.contains("active")) {
-      cards[c].classList.remove("active")
+window.addEventListener("scroll", function(e) {
+    if(window.scrollY <= 25){
+        $('.navbar').css('background', 'transparent');
+        $('.navbar--title').css('color', '#12675D');
+        $('.navbar--options').css('color', '#12675D');
+        $('.navbar--choice:hover').css('color', '#12675D !important');
+        $('.navbar--choice:after').css('color', '#12675D !important');
+    }else {
+        $('.navbar').css('background', 'linear-gradient(90deg, #264653, #276467, #28807a, #2A9D8F)');
+        $('.navbar--title').css('color', 'white');
+        $('.navbar--options').css('color', 'white');
+        $('.navbar--choice:hover').css('color', '#white !important');
+        $('.navbar--choice:after').css('color', '#white !important');
     }
-  })
-  if(cardState){
-    cards[c].classList.add("active")
-    cardState = false
-  }else {
-    cards[c].classList.remove("active")
-    cardState = true
+})
 
-  }
-
-    toggleDisplay(cardState, cards[c], shortDesc[c], longDesc[c]);
-}
-
-
-function toggleDisplay(state:boolean, c:HTMLElement, short:HTMLElement, long:HTMLElement) {
-    if (c.classList.contains("active")) {
-      short.style.setProperty("display", "flex");
-      long.style.setProperty("display", "none");
-      c.style.setProperty("justify-content", "flex-end");
-      c.classList.remove("active")
-    } else {
-      short.style.setProperty("display", "none");
-      long.style.setProperty("display", "block");
-      c.style.setProperty("justify-content", "flex-start");
-    }
-}
-
- */

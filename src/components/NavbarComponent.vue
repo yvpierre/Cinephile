@@ -21,19 +21,20 @@
 <style>
 
 .navbar {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: row;
+  top: 0;
   width: 100%;
   height: 55px;
-  top: 0;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  z-index: 9999;
 
-  background: linear-gradient(90deg, #264653, #276467, #28807a, #2A9D8F);
+  background: transparent;
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
+  transition: 2000ms ease-in-out;
 }
 
 @keyframes gradient {
@@ -48,6 +49,10 @@
   }
 }
 
+.navbar--title, .navbar--options {
+  color: #12675D;
+}
+
 .navbar--title {
   height: 100%;
   display: flex;
@@ -59,6 +64,7 @@
   font-size: 32px;
 }
 
+
 .navbar--options {
   display: flex;
   align-items: center;
@@ -66,7 +72,6 @@
   width: 100%;
   max-width: 500px;
   justify-content: space-evenly;
-  color: #d9d9d9;
   font-size: 16px;
 }
 
@@ -105,6 +110,7 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  color: white;
 
 }
 

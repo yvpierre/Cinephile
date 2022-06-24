@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 100px;
   padding: 40px 30px;
   justify-content: space-around;
 }
